@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <title>brickslayer</title>
+
+  <!-- javascript includes -->
+  <script type="text/javascript" src="prototype-1.5.1.js"></script>
+  <script type="text/javascript" src="gameconsole.js"></script>
+  <script type="text/javascript" src="brickslayer.js"></script>
+  <script type="text/javascript" src="soundmanager2.js"></script>
+  <script type="text/javascript">
+    soundManager.url = 'soundmanager2.swf'; // path to movie
+    soundManager.onload = function () { loadSounds() }; 
+    soundManager.debugMode = false;
+  </script>
+  <link rel="stylesheet" href="brickslayer.css"/>
+ 
+</head>
+<body>
+
+<div id="console">
+  <!-- main screen of the game -->
+  <div id="game" class="screen">
+    <div id="paddle" class="sprite"></div>
+    <div id="ball" class="sprite"></div>
+    <div id="bricks"></div>
+	
+
+<!--	<div style="  background: none repeat scroll 0 0 #ccc;    border-top: 1px solid #999;    height: 20px;    margin: 0;    position: relative;    top: 282px;
+    width: 100%;">-->
+    <div id="lake"></div>
+    <div class="wall" id="leftWall"></div>
+    <div class="wall" id="rightWall"></div>
+    <div class="wall" id="ceiling"></div>
+    <div class="wall" id="floor"></div>
+    <div class="spare" id="spare1"></div>
+    <div class="spare" id="spare2"></div>
+    <div class="spare" id="spare3"></div>
+    <div id="levelarea">level:</div>
+    <div id="level">1</div>
+    <div id="scorecard">score:</div><div id="score">0</div>
+<!--</div>-->
+	
+	
+	
+  </div>
+
+  <!-- title screen -->
+  <div id="title" class="overlay screen">
+    <img src="sprites/brickslayerlogo.png" alt="brickslayer" />
+    <p>use <strong>arrow keys</strong> to move paddle</p>
+    <p>press <strong>up arrow</strong> to launch ball</p>
+    <p>press <strong>p</strong> to pause game</p>
+    <p class="pressenter">press <strong>enter</strong> to start</p>
+  </div>
+
+  <!-- pause screen -->
+  <div id="pause" class="overlay screen">
+    <img src="sprites/paused.png" alt="paused"/>
+    <p>press <strong>p</strong> again to unpause</p>
+  </div>
+
+  <!-- game over screen -->
+  <div id="gameover" class="overlay screen">
+    <img src="sprites/gameover.png" alt="game over"/>
+  </div>
+  
+  <!-- level clear screen -->
+  <div id="clear" class="overlay screen">
+    <img src="sprites/levelclear.png" alt="level clear!"/>
+  </div>
+  <!-- high score screen -->
+  <div id="scores" class="overlay screen">
+    <img src="sprites/highscores.png" alt="high scores" />
+    <table id="scoretable" width="100%">
+    </table>
+    <script type="text/javascript">
+    /* <![CDATA[ */
+		for (i=1; i<=5; i++) {
+			$('scoretable').innerHTML += (
+			   '<tr id="high_row_' + i +  '" class="old">' +
+			   '<td class="name" id="high_name_' + i + '"</td>'+
+			   '<td class="score" id="high_score_' + i + '"</td>'+
+			   '</tr>');
+		}
+    /* ]]> */
+    </script>
+    <p class="pressenter">press <strong>enter</strong> to start</p>
+  </div>
+  
+  <!-- enter your name screen -->
+  <div id="congrats" class="overlay screen">
+    <img src="sprites/congrats.png" alt="congratulations!" />
+  	<p>You made the High Score List! Enter Your Name!</p>
+    <label>name
+      <input type="text" id="player_name" name="player_name" />
+      <input type="hidden" id="player_score" name="player_score" />
+      <input type="hidden" id="player_level" name="player_level" />
+    </label>
+    <button onclick="post_score()">go</button>
+  </div>
+
+
+</div>
+
+
+<!-- code to run when the page loads -->
+<script language="javascript">
+  initGame();
+</script>
+
+</body>
+</html>

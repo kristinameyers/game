@@ -1,0 +1,44 @@
+.game{padding-bottom:36px}
+.game{padding-bottom:36px}
+.game_outer{padding:10px; border:1px solid #dcdcdc; display:table; margin:15px auto 0; moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; behavior:url(PIE.htc); -moz-box-shadow:0 0 10px 0 #dcdcdc; -webkit-box-shadow:0 0 10px 0 #dcdcdc; box-shadow:0 0 10px 0 #dcdcdc;}
+#console{position:relative; width:288px; padding:0; height:480px}
+.screen{position:absolute; top:0; left:0; margin:0; padding:0; height:100%; width:100%}
+.sprite{position:absolute; padding:0; margin:0}
+#paddle{background-image:url(sprites/paddle.png); background-repeat:no-repeat; left:158px; top:330px; height:151px; width:100px}
+#bricks div{width:60px; max-width:60px; height:60px; max-height:60px; display:block; position:absolute; background-repeat:no-repeat}
+#bricks .shade7{background-image:url(sprites/gift_icon_f.png)}
+#bricks .shade6{background-image:url(sprites/gift_icon_a.png)}
+#bricks .shade5{background-image:url(sprites/gift_icon_b.png)}
+#bricks .shade4{background-image:url(sprites/gift_icon_a.png)}
+#bricks .shade3{background-image:url(sprites/gift_icon_b.png)}
+#bricks .shade2{background-image:url(sprites/gift_icon_c.png)}
+#bricks .shade1{background-image:url(sprites/gift_icon_d.png)}
+#lake{position:absolute; top:360px; height:30px; width:100%; margin:0}
+#ball, .spare{position:absolute; background-image:url(sprites/ball.png); height:25px; width:25px; padding:0; margin:0}
+#ball{top:274px; left:268px}
+.wall{display:none; width:400px; height:300px; position:absolute; margin:0; padding:0}
+#leftWall{top:0; left:-400px} 
+#rightWall{top:0; left:400px}
+#ceiling{top:-300px; left:0}
+#floor{top:300px; left:0}
+#levelarea, #level, #scorecard, #score, #liveremain{position:absolute; top:500px; color:#8d8f8f; padding:2px 0; font-size:11px; font-family:"open_sanssemibold"}
+#scorecard{left:-10px}
+#liveremain{left:146px}
+#scorecard span.i{color:#cd48c8}
+#scorecard span.f{color:#00b3df}
+#scorecard span.t{color:#ff9c10}
+#score{left:44px; text-align:right; background:#ff9c10; padding:3px 6px; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; behavior:url(PIE.htc); color:#fff; font-family: 'open_sansbold'}
+#levelarea{left:88px}
+#level{left:122px}
+.spare{top:499px; width:18px; height:18px; background-image:url("sprites/ball_b.png")}
+#spare1{left:241px}
+#spare2{left:261px}
+#spare3{left:281px}
+.overlay{text-align:center; background-color:transparent; background-image:url(sprites/overlay_bg.png); color:#fff}
+#scoretable{width:350px; margin:auto; margin-top:5px; border-collapse:collapse; border:solid #666 3px}
+#scoretable td{padding:2px; background-color:#fff; border:none; height:20px; text-align:left}
+#scoretable tr.old{color:inherit}
+#scoretable tr.new{color:#333; font-weight:bold}
+#scoretable td.score{text-align:right}
+p.pressenter, #gameover, #clear{font-size:15px; margin:0; height:476px; line-height:476px; font-family:"open_sanssemibold" ; color:#FFFFFF}
+p.pressenter span, #gameover span, #clear span{font-weight:bold; font-family: 'open_sansbold'; font-size:18px; color:#FFFFFF}

@@ -1,0 +1,211 @@
+@font-face {
+    font-family: 'open_sansbold';
+    src: url('fonts/opensans-bold_0-webfont.eot');
+    src: url('fonts/opensans-bold_0-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/opensans-bold_0-webfont.woff2') format('woff2'),
+         url('fonts/opensans-bold_0-webfont.woff') format('woff'),
+         url('fonts/opensans-bold_0-webfont.ttf') format('truetype'),
+         url('fonts/opensans-bold_0-webfont.svg#open_sansbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+  font-size: 10pt;
+}
+
+.game{ padding-bottom:36px}
+.game_outer{padding:10px; border:1px solid #dcdcdc; display:table; margin:15px auto 0; moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; behavior:url(PIE.htc); -moz-box-shadow:0 0 10px 0 #dcdcdc; -webkit-box-shadow:0 0 10px 0 #dcdcdc; box-shadow:0 0 10px 0 #dcdcdc;}
+#console {
+  position: relative;
+  width:294px;
+  padding:0;
+  /*overflow: hidden;*/
+  height: 534px;
+  /*left:460px;*/ /*border:1px solid #dcdcdc; moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; behavior:url(PIE.htc); -moz-box-shadow:0 0 10px 0 #dcdcdc; -webkit-box-shadow:0 0 10px 0 #dcdcdc; box-shadow:0 0 10px 0 #dcdcdc;*/
+}
+
+
+
+.screen {
+  position:absolute;
+  top: 0px;
+  left: 0px;
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  width: 100%;
+}
+
+.sprite {
+  position: absolute;
+  padding:0px;
+  margin:0px;
+}
+
+#paddle {
+  background-image:url(sprites/paddle.png);
+  background-repeat:no-repeat;
+  left: 118px;
+  top: 330px;
+  height:200px;
+  width:150px;
+}
+
+
+#bricks div {
+  width: 60px;
+  max-width: 60px;
+  height: 60px;
+  max-height: 60px;
+  /*border: solid #dcdcdc 1px;
+  background-color:#CCCCCC;*/
+  display:block;
+  position: absolute;
+}
+
+#bricks .shade4 {
+background-image: url(sprites/gift_icon_a.png);
+border-color:#FE9A10;
+background-repeat:no-repeat
+}
+
+#bricks .shade3 {
+background-image: url(sprites/gift_icon_b.png);
+border-color:#26A9DF;
+background-repeat:no-repeat
+}
+#bricks .shade2 {
+ background-image: url(sprites/gift_icon_c.png);
+ border-color:#FFD755;
+ background-repeat:no-repeat
+}
+#bricks .shade1 {
+background-image: url(sprites/gift_icon_d.png);
+border-color:#B4E14E;
+background-repeat:no-repeat
+}
+/*#bricks .shade2 {
+background-image: url(sprites/gift_icon_e.png);
+border-color:#CE48C5;
+background-repeat:no-repeat
+}
+#bricks .shade1 {
+  background-image: url(sprites/gift_icon_f.png);
+  border-color:#CD3333;
+  background-repeat:no-repeat
+}*/
+
+#lake {
+  position:absolute;
+  top: 360px;
+  height: 30px;
+  width: 100%;
+  margin: 0px;
+}
+
+#ball, .spare {
+  position:absolute;
+  background-image:url(sprites/ball.png);
+  height:25px;
+  width:25px;
+  padding:0;
+  margin:0;
+}
+
+#ball {
+  top: 489px;
+  left: 268px;
+}
+
+.wall {
+  display: none;
+  width: 400px;
+  height: 300px;
+  position: absolute;
+  margin:0;
+  padding:0;
+}
+#leftWall  { top: 0px;  left: -400px; } 
+#rightWall { top: 0px;  left:  400px; }
+#ceiling   { top: -300px; left: 0px;  }
+#floor     { top:  300px; left: 0px;  }
+
+#levelarea, #level, #scorecard, #score, #liveremain {
+  position:absolute;
+  top: 554px;
+  color: #8d8f8f; padding:5px 0; font-size:11px; font-family:"open_sanssemibold"
+  /*font-weight: bold;*/ 
+}
+
+#scorecard {
+  left:-10px;
+}
+
+#liveremain{left:153px}
+#scorecard span.i{color:#cd48c8}
+#scorecard span.f{color:#00b3df}
+#scorecard span.t{color:#ff9c10}
+
+#score {
+  left: 44px;
+  /*width: 45px;*/
+  text-align: right;
+  background:#ff9c10; padding:5px 10px; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; behavior:url(PIE.htc); color:#fff; font-family: 'open_sansbold';
+}
+
+#levelarea {
+  left: 96px;
+}
+
+#level {
+  left: 128px;
+}
+
+
+.spare { top: 555px; width:18px; height:18px; background-image:url("sprites/ball_b.png")}
+#spare1 { left: 248px; }
+#spare2 { left: 268px; }
+#spare3 { left: 288px; }
+
+
+
+.overlay {
+  /*height: 310px;*/
+  text-align: center;
+  background-color: transparent;
+  background-image:url(sprites/overlay_bg.png);
+  color:#fff;
+/*  display: none;*/
+}
+
+#scoretable {
+  width: 350px;
+  margin:auto;
+  margin-top: 5px;
+  border-collapse:collapse;
+  border: solid #666 3px;
+}
+
+#scoretable td {
+  padding: 2px;
+  background-color:#FFFFFF;
+  border:none;
+  height: 20px;
+  text-align: left;
+}
+
+#scoretable tr.old {
+  color: inherit;
+}
+
+#scoretable tr.new {
+  color: #333333;
+  font-weight:bold;
+}
+
+#scoretable td.score {
+  text-align: right;
+}
+
+p.pressenter{ font-size:15px; margin:0; height:530px; line-height:530px; font-family:"open_sanssemibold"}
+p.pressenter span{ font-weight:bold; font-family: 'open_sansbold'; font-size:18px}
